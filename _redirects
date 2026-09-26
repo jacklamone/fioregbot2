@@ -1,0 +1,5 @@
+# La build Next.js usa basePath "/stefano-fiore": tutti gli asset e i link
+# interni puntano a /stefano-fiore/... mentre i file stanno nella root.
+# Questo rewrite (200, non redirect) li serve dalla root senza cambiare l'URL.
+/stefano-fiore     /         200
+/stefano-fiore/*   /:splat   200
