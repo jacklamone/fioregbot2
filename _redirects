@@ -1,5 +1,8 @@
-# La build Next.js usa basePath "/stefano-fiore": tutti gli asset e i link
-# interni puntano a /stefano-fiore/... mentre i file stanno nella root.
-# Questo rewrite (200, non redirect) li serve dalla root senza cambiare l'URL.
+# La build è pubblicata su GitHub Pages sotto /fioregbot2/ (basePath):
+# tutti gli asset e i link interni puntano a /fioregbot2/... Su Netlify i file
+# stanno nella root, quindi questo rewrite (200, non redirect) li serve da lì
+# senza cambiare l'URL. /stefano-fiore resta per i vecchi link.
+/fioregbot2        /         200
+/fioregbot2/*      /:splat   200
 /stefano-fiore     /         200
 /stefano-fiore/*   /:splat   200
